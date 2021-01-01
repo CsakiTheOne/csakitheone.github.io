@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #EEE;
+}
+
+body {
+    background: #121212;
+}
+
+header {
+    padding: 20vh 0;
+    background: #3F51B5;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+input, button {
+    padding: 4px;
+    background: #282828;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.container {
+    padding: 64px;
+}

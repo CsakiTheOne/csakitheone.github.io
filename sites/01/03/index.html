@@ -11,7 +11,17 @@
         <h1>✨ Rohadt körtés szandál ✨</h1>
     </header>
     <div class="container">
+        <p id="txtRandom"></p>
         <a href="https://csakitheone.github.io">Vissza a főoldalra</a>
     </div>
+
+    <script>
+        var txtRandom = document.getElementById('txtRandom');
+        txtRandom.addEventListener('click', setTxtRandom);
+        function setTxtRandom() {
+            txtRandom.innerText = Math.round(Math.random() * (111 - 6) + 6);
+        }
+        setTxtRandom();
+    </script>
 </body>
 </html>

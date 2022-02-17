@@ -1,7 +1,27 @@
 * {
+    margin: none;
+    padding: none;
     color: #FFF;
 }
 
 body {
     background-color: #121212;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    flex: none;
 }

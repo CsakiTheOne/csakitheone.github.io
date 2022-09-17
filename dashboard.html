@@ -12,6 +12,7 @@
     <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
 
@@ -24,13 +25,16 @@
             
             <div class="col s12 m8">
                 <div class="card" style="background: #5865f2;">
-                    <widgetbot
-                        server="931451560112844800"
-                        channel="1020626853033164852"
-                        width="100%"
-                        height="350"
-                    ></widgetbot>
-                    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+                    <div class="widgetbot-container">
+                        <widgetbot
+                            id="widgetbot"
+                            server="931451560112844800"
+                            channel="1020626853033164852"
+                            width="calc(100% + 200px)"
+                            height="calc(100% + 48px + 72px)"
+                        ></widgetbot>
+                        <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+                    </div>
                 </div>
             </div>
 
@@ -38,21 +42,9 @@
                 <div class="card" style="background: #5865f2;">
                     <iframe
                         src="https://discord.com/widget?id=931451560112844800&theme=dark"
-                        width="100%" height="350" allowtransparency="true" frameborder="0"
+                        width="100%" height="500px" allowtransparency="true" frameborder="0"
                         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
                     </iframe>
-                </div>
-            </div>
-
-            <div class="col s12">
-                <div class="card black">
-                    <div class="card-content">
-                        <span class="card-title">//TODO</span>
-                        <ul class="collection">
-                            <li class="collection-item grey darken-4">Korrepetálás</li>
-                            <li class="collection-item grey darken-4">Team Fortress 2</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             
@@ -62,8 +54,17 @@
     </div>
 
     <script>
+        // Casting
         cast.framework.CastReceiverContext.getInstance().start();
 
+        // widgetbot
+        setTimeout(() => {
+            const widgetbot = document.getElementById("widgetbot");
+            const hamburgerButton = widgetbot.firstChild.contentWindow.document.getElementsByClassName("hamburger")[0];
+            if (hamburgerButton.getAttribute("open")) { hamburgerButton.click(); }
+        }, 5000);
+
+        // Dynamic content
         Array.prototype.slice.call(document.getElementsByClassName("date")).forEach(item => {
             const days = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"];
             const date = new Date();

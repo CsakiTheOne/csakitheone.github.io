@@ -16,6 +16,8 @@
 </head>
 <body>
 
+    <span id="debugger" style="position: fixed;"></span>
+
     <div class="container-custom">
 
         <h3 style="display: inline-block; margin: 0;">Hali Csáki! <span class="time"></span></h3>
@@ -55,7 +57,12 @@
 
     <script>
         // Casting
-        cast.framework.CastReceiverContext.getInstance().start();
+        const context = cast.framework.CastReceiverContext.getInstance();
+        const playerManager = context.getPlayerManager();
+        context.addCustomMessageListener("urn:x-cast:com.csakitheone.pcd", customEvent => {
+            document.getElementById("debugger").innerText += customEvent + "\n";
+        });
+        context.start();
 
         // widgetbot
         setTimeout(() => {

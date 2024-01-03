@@ -26,7 +26,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <Card
                     style={{ margin: 8 }}
                 >
-                    <img src={wholesomeWareHeader} alt="" />
+                    <img
+                        style={{ width: '100%', height: 'auto' }}
+                        src={wholesomeWareHeader}
+                        alt=""
+                    />
                 </Card>
                 <p style={{ padding: 8 }}>
                     WholesomeWare is a software brand created by me.

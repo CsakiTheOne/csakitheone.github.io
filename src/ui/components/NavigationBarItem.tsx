@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../theme/Theme';
+import './NavigationBarItem.css';
 
 interface NavigationBarItemProps {
     icon: React.ReactNode;
@@ -13,13 +14,9 @@ const NavigationBarItem: React.FC<NavigationBarItemProps> = ({ icon, label, isSe
 
     return (
         <div
+            className='NavigationBarItem'
             style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                padding: 8,
                 color: isSelected ? theme.colorScheme.primary : theme.colorScheme.onSurfaceVariant,
-                cursor: 'pointer',
             }}
             onClick={onClick}
         >

@@ -10,11 +10,14 @@ import Row from '../ui/components/Row';
 import BottomAppBar from '../ui/components/BottomAppBar';
 import NavigationBarItem from '../ui/components/NavigationBarItem';
 import wholesomeWareIcon from '../res/icons/path';
+import { useNavigate } from 'react-router-dom';
+import AppNavBar from '../components/AppNavBar';
 
 interface HomePageProps { }
 
 const HomePage: React.FC<HomePageProps> = () => {
     const theme = useContext(ThemeContext);
+    const navigate = useNavigate();
     const age = Math.floor((new Date().getTime() - new Date(2001, 1, 20).getTime()) / (365.25 * 24 * 60 * 60 * 1000));
 
     return (
@@ -80,24 +83,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </Card>
                 </Row>
             </Column>
-            <BottomAppBar>
-                <NavigationBarItem
-                    icon={<Icon
-                        path={mdiHome}
-                        size={1}
-                    />}
-                    label='Home'
-                    isSelected={true}
-                />
-                <NavigationBarItem
-                    icon={<Icon
-                        path={wholesomeWareIcon}
-                        size={1}
-                    />}
-                    label='WholesomeWare'
-                    isSelected={false}
-                />
-            </BottomAppBar>
+            <AppNavBar selectedItem='home' />
         </Page>
     );
 };

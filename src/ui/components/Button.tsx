@@ -23,7 +23,12 @@ const Button: React.FC<ButtonProps> = ({ style, onClick, icon, label }) => {
             }}
             onClick={onClick}
         >
-            <Row style={{ alignItems: 'center' }}>
+            <Row
+                style={{
+                    alignItems: 'center',
+                    justifyContent: icon ? 'flex-start' : 'center',
+                }}
+            >
                 {icon}
                 {icon && <span style={{ width: 8 }}></span>}
                 <span style={{ fontWeight: 'bold' }}>

@@ -11,6 +11,8 @@ const Card: React.FC<CardProps> = ({ style, children }) => {
     return (
         <Surface style={{
             borderRadius: 16,
+            overflow: 'hidden',
+            boxShadow: '0 6px 8px rgba(0, 0, 0, .2)',
             ...style,
         }}>
             <Column>

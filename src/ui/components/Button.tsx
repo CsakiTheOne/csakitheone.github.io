@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../theme/Theme';
 import Row from './Row';
+import './Button.css';
 
 interface ButtonProps {
     style?: React.CSSProperties;
@@ -14,20 +15,17 @@ const Button: React.FC<ButtonProps> = ({ style, onClick, icon, label }) => {
 
     return (
         <button
+            className='Button'
             style={{
                 backgroundColor: theme.colorScheme.primary,
                 color: theme.colorScheme.onPrimary,
-                borderRadius: 16,
-                padding: 8,
-                border: 'none',
-                outline: 'none',
-                cursor: 'pointer',
                 ...style,
             }}
             onClick={onClick}
         >
-            <Row>
+            <Row style={{ alignItems: 'center' }}>
                 {icon}
+                {icon && <span style={{ width: 8 }}></span>}
                 <span style={{ fontWeight: 'bold' }}>
                     {label}
                 </span>

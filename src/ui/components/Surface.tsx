@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import ThemeContext from '../theme/Theme';
 
 interface SurfaceProps {
+    elevation?: number;
     style?: React.CSSProperties;
     children?: React.ReactNode;
 }
 
-const Surface: React.FC<SurfaceProps> = ({ style, children }) => {
+const Surface: React.FC<SurfaceProps> = ({ elevation, style, children }) => {
     const theme = useContext(ThemeContext);
 
     return (
@@ -14,6 +15,7 @@ const Surface: React.FC<SurfaceProps> = ({ style, children }) => {
             style={{
                 backgroundColor: theme.colorScheme.surfaceVariant,
                 color: theme.colorScheme.onSurfaceVariant,
+                boxShadow: theme.getBoxShadowFromElevation(elevation ?? 5) + '',
                 ...style,
             }}
         >

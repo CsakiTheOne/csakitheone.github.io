@@ -3,10 +3,11 @@ import ThemeContext from '../theme/Theme';
 import Surface from './Surface';
 
 interface Props {
+    style?: React.CSSProperties;
     children: React.ReactNode;
 }
 
-const Page: React.FC<Props> = ({ children }) => {
+const Page: React.FC<Props> = ({ style, children }) => {
     const theme = useContext(ThemeContext);
 
     return (
@@ -22,6 +23,7 @@ const Page: React.FC<Props> = ({ children }) => {
                 bottom: 0,
                 backgroundColor: theme.colorScheme.background,
                 color: theme.colorScheme.onBackground,
+                ...style,
             }}
         >
             <div

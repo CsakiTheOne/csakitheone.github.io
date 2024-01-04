@@ -42,8 +42,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </p>
                 </Card>
                 <Row>
-                    <Card style={{ margin: 8, padding: 8, width: '50%' }}>
-                        <h3 style={{ padding: 8 }}>Coding links</h3>
+                    <Card style={{ margin: 8, padding: 8, width: '45%' }}>
+                        <h3 style={{ padding: 8 }}>Socials</h3>
                         <Button
                             style={{ margin: 8 }}
                             onClick={() => {
@@ -58,20 +58,6 @@ const HomePage: React.FC<HomePageProps> = () => {
                         <Button
                             style={{ margin: 8 }}
                             onClick={() => {
-                                window.open('https://play.google.com/store/apps/dev?id=8177011913013516936', '_blank');
-                            }}
-                            icon={<Icon
-                                path={mdiGooglePlay}
-                                size={1}
-                            />}
-                            label='Google Play'
-                        />
-                    </Card>
-                    <Card style={{ margin: 8, padding: 8, width: '50%' }}>
-                        <h3 style={{ padding: 8 }}>Personal links</h3>
-                        <Button
-                            style={{ margin: 8 }}
-                            onClick={() => {
                                 window.open('https://www.instagram.com/csakitheone/', '_blank');
                             }}
                             icon={<Icon
@@ -79,6 +65,23 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 size={1}
                             />}
                             label='Instagram'
+                        />
+                    </Card>
+                    <Card style={{ margin: 8, padding: 8, width: '55%' }}>
+                        <h3 style={{ padding: 8 }}>My brand</h3>
+                        <p style={{ padding: 8 }}>
+                            Wholesome and useful software for everyone.
+                        </p>
+                        <Button
+                            style={{ margin: 8 }}
+                            onClick={() => {
+                                navigate('/wholesomeware');
+                            }}
+                            icon={<Icon
+                                path={wholesomeWareIcon}
+                                size={1}
+                            />}
+                            label='Check out WholesomeWare'
                         />
                     </Card>
                 </Row>

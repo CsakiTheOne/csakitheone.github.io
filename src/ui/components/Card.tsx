@@ -3,18 +3,21 @@ import Surface from './Surface';
 import Column from './Column';
 
 interface CardProps {
+    elevation?: number;
     style?: React.CSSProperties;
     children: React.ReactNode;
 }
 
-const Card: React.FC<CardProps> = ({ style, children }) => {
+const Card: React.FC<CardProps> = ({ elevation, style, children }) => {
     return (
-        <Surface style={{
-            borderRadius: 16,
-            overflow: 'hidden',
-            boxShadow: '0 6px 8px rgba(0, 0, 0, .2)',
-            ...style,
-        }}>
+        <Surface
+            elevation={elevation}
+            style={{
+                borderRadius: 16,
+                overflow: 'hidden',
+                ...style,
+            }}
+        >
             <Column>
                 {children}
             </Column>

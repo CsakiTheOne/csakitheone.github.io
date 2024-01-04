@@ -21,7 +21,12 @@ const HomePage: React.FC<HomePageProps> = () => {
     const navigate = useNavigate();
 
     return (
-        <Page>
+        <Page
+            style={{
+                backgroundColor: theme.colorScheme.secondaryContainer,
+                color: theme.colorScheme.onSecondaryContainer,
+            }}
+        >
             <Column style={{ padding: 8 }}>
                 <Card
                     style={{ margin: 8 }}
@@ -41,15 +46,21 @@ const HomePage: React.FC<HomePageProps> = () => {
                         rel='noopener noreferrer'
                     >Dóri</a>.
                 </p>
-                <Button
-                    style={{ margin: 8 }}
-                    label='Check all apps on Google Play'
-                    onClick={() => {
-                        window.open('https://play.google.com/store/apps/dev?id=8177011913013516936', '_blank');
-                    }}
-                />
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Button
+                        style={{ margin: 8 }}
+                        icon={<Icon
+                            path={mdiGooglePlay}
+                            size={1}
+                        />}
+                        label='Check all my apps on Google Play'
+                        onClick={() => {
+                            window.open('https://play.google.com/store/apps/dev?id=8177011913013516936', '_blank');
+                        }}
+                    />
+                </div>
             </Column>
-            <AppNavBar selectedItem='wholesomeware' />
+            <AppNavBar style={{ backgroundColor: theme.colorScheme.primaryContainer }} selectedItem='wholesomeware' />
         </Page>
     );
 };

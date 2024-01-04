@@ -15,6 +15,11 @@ class Theme {
     public get colorScheme(): ColorScheme {
         return this.isDark ? this.darkColorScheme : this.lightColorScheme;
     }
+
+    getBoxShadowFromElevation(elevation: number): string {
+        const boxShadow = `0px ${elevation / 2}px ${elevation}px rgba(0, 0, 0, 0.3)`;
+        return boxShadow;
+    }
 }
 
 const defaultTheme = new Theme(lightColors, darkColors, true);

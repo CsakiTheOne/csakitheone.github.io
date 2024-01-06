@@ -4,14 +4,13 @@ import Column from '../ui/components/Column';
 import ThemeContext from '../ui/theme/Theme';
 import Button from '../ui/components/Button';
 import Icon from '@mdi/react';
-import { mdiGithub, mdiGooglePlay, mdiHome, mdiInstagram } from '@mdi/js';
+import { mdiDownload, mdiGithub, mdiInstagram } from '@mdi/js';
 import Card from '../ui/components/Card';
 import Row from '../ui/components/Row';
-import BottomAppBar from '../ui/components/BottomAppBar';
-import NavigationBarItem from '../ui/components/NavigationBarItem';
 import wholesomeWareIcon from '../res/icons/path';
 import { useNavigate } from 'react-router-dom';
 import AppNavBar from '../components/AppNavBar';
+import publicFiles from '../res/values/publicFiles';
 
 interface HomePageProps { }
 
@@ -34,13 +33,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                         /t͡ʃa:ki/
                     </a>
                 </p>
-                <Card style={{ margin: 8, padding: 8 }}>
-                    <p style={{ padding: 8 }}>
-                        I'm a {age} year old software developer from Hungary.
-                        I love making mobile apps, but I can also make websites,
-                        desktop apps, games, development tools and more.
-                    </p>
-                </Card>
+                <p style={{ padding: 8 }}>
+                    I'm a {age} year old software developer from Hungary.
+                    I love making mobile apps, but I can also make websites,
+                    desktop apps, games, development tools and more.
+                </p>
                 <Row>
                     <Card style={{ margin: 8, padding: 8, width: '45%' }}>
                         <h3 style={{ padding: 8 }}>Socials</h3>
@@ -85,6 +82,36 @@ const HomePage: React.FC<HomePageProps> = () => {
                         />
                     </Card>
                 </Row>
+                <h2 style={{ padding: 8 }}>Coding since 2012</h2>
+                <p style={{ padding: 8 }}>
+                    I started coding when I was 11 years old.
+                    It all started when my older sister made me do her IT homeworks.
+                    I really enjoyed learning about computers and programming,
+                    so I started to learn by myself. I started with dotNET Basic,
+                    HTML, CSS and later in school I learned C# and C++.
+                    Most of my knowledge comes from home learning and experimenting.
+                    Since then I learned many languages, frameworks and technologies.
+                </p>
+                <Card style={{ margin: 8, padding: 8 }}>
+                    <h3 style={{ padding: 8 }}>10 year OG pack</h3>
+                    <p style={{ padding: 8 }}>
+                        In 2022 I celebrated my 10th anniversary of coding
+                        by making a collection of my early projects.
+                    </p>
+                    <div style={{ textAlign: 'right' }}>
+                        <Button
+                            style={{ margin: 8 }}
+                            onClick={() => {
+                                window.open(publicFiles['10YearOGPack']);
+                            }}
+                            icon={<Icon
+                                path={mdiDownload}
+                                size={1}
+                            />}
+                            label='Get the collection'
+                        />
+                    </div>
+                </Card>
             </Column>
             <AppNavBar selectedItem='home' />
         </Page>

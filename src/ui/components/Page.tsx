@@ -21,6 +21,7 @@ const Page: React.FC<Props> = ({ style, children }) => {
                 left: 0,
                 right: 0,
                 bottom: 0,
+                overflow: 'auto',
                 backgroundColor: theme.colorScheme.background,
                 color: theme.colorScheme.onBackground,
                 ...style,

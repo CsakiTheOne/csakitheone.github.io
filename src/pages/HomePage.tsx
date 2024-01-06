@@ -4,7 +4,7 @@ import Column from '../ui/components/Column';
 import ThemeContext from '../ui/theme/Theme';
 import Button from '../ui/components/Button';
 import Icon from '@mdi/react';
-import { mdiDownload, mdiGithub, mdiInstagram } from '@mdi/js';
+import { mdiDownload, mdiGithub, mdiInstagram, mdiYoutube } from '@mdi/js';
 import Card from '../ui/components/Card';
 import Row from '../ui/components/Row';
 import wholesomeWareIcon from '../res/icons/path';
@@ -38,11 +38,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                     I love making mobile apps, but I can also make websites,
                     desktop apps, games, development tools and more.
                 </p>
-                <Row>
-                    <Card style={{ margin: 8, padding: 8, width: '45%' }}>
-                        <h3 style={{ padding: 8 }}>Socials</h3>
+                <Card style={{ margin: 8, padding: 8 }}>
+                    <h3 style={{ padding: 8 }}>Socials</h3>
+                    <Row>
                         <Button
-                            style={{ margin: 8 }}
+                            style={{ margin: 8, width: '50%' }}
                             onClick={() => {
                                 window.open('https://github.com/CsakiTheOne', '_blank');
                             }}
@@ -53,7 +53,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             label='GitHub'
                         />
                         <Button
-                            style={{ margin: 8 }}
+                            style={{ margin: 8, width: '50%' }}
                             onClick={() => {
                                 window.open('https://www.instagram.com/csakitheone/', '_blank');
                             }}
@@ -63,25 +63,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                             />}
                             label='Instagram'
                         />
-                    </Card>
-                    <Card style={{ margin: 8, padding: 8, width: '55%' }}>
-                        <h3 style={{ padding: 8 }}>My brand</h3>
-                        <p style={{ padding: 8 }}>
-                            Wholesome and useful software for everyone.
-                        </p>
-                        <Button
-                            style={{ margin: 8 }}
-                            onClick={() => {
-                                navigate('/wholesomeware');
-                            }}
-                            icon={<Icon
-                                path={wholesomeWareIcon}
-                                size={1}
-                            />}
-                            label='Check out WholesomeWare'
-                        />
-                    </Card>
-                </Row>
+                    </Row>
+                </Card>
                 <h2 style={{ padding: 8 }}>Coding since 2012</h2>
                 <p style={{ padding: 8 }}>
                     I started coding when I was 11 years old.
@@ -97,8 +80,20 @@ const HomePage: React.FC<HomePageProps> = () => {
                     <p style={{ padding: 8 }}>
                         In 2022 I celebrated my 10th anniversary of coding
                         by making a collection of my early projects.
+                        Disclaimer: I was a kid and I'm Hungarian :D
                     </p>
                     <div style={{ textAlign: 'right' }}>
+                        <Button
+                            style={{ margin: 8 }}
+                            onClick={() => {
+                                window.open('https://youtu.be/JklcPesoyis?si=ALWmChF-7ClhCzlU', '_blank');
+                            }}
+                            icon={<Icon
+                                path={mdiYoutube}
+                                size={1}
+                            />}
+                            label='Watch montage video'
+                        />
                         <Button
                             style={{ margin: 8 }}
                             onClick={() => {
@@ -109,6 +104,26 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 size={1}
                             />}
                             label='Get the collection'
+                        />
+                    </div>
+                </Card>
+                <Card style={{ margin: 8, padding: 8 }}>
+                    <h3 style={{ padding: 8 }}>Promise of a brand</h3>
+                    <p style={{ padding: 8 }}>
+                        In my "10 years of coding" video I promised that I will bring all my supported projects under one brand.
+                        Guess what?
+                    </p>
+                    <div style={{ textAlign: 'right' }}>
+                        <Button
+                            style={{ margin: 8 }}
+                            onClick={() => {
+                                navigate('/wholesomeware');
+                            }}
+                            icon={<Icon
+                                path={wholesomeWareIcon}
+                                size={1}
+                            />}
+                            label='Check out WholesomeWare'
                         />
                     </div>
                 </Card>

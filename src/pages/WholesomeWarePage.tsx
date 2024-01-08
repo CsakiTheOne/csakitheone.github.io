@@ -44,20 +44,19 @@ const HomePage: React.FC<HomePageProps> = () => {
                     alt=""
                 />
             </Surface>
-            <Row>
-                <div style={{ width: '30%' }}>
+            <Row style={{ alignItems: 'start' }}>
+                <Surface style={{ borderRadius: '40%', width: '30%', margin: 8, }}>
                     <img
                         style={{
-                            width: 'calc(100% - 16px)',
+                            display: 'block',
+                            width: '100%',
                             aspectRatio: 1,
-                            margin: 8,
-                            borderRadius: '50%',
                         }}
                         src={wholesomeWareLogo}
                         alt="WholesomeWare logo"
                     />
-                </div>
-                <Card style={{ margin: 8 }}>
+                </Surface>
+                <Card style={{ margin: 8, padding: 8 }}>
                     <p style={{ padding: 8 }}>
                         WholesomeWare is a software brand created by me.
                         Graphics are made by my friend, <a

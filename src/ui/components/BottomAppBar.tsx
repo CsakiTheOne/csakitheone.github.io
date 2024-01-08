@@ -4,14 +4,16 @@ import Row from './Row';
 
 interface Props {
     elevation?: number;
+    className?: string;
     style?: React.CSSProperties;
     children: React.ReactNode;
 }
 
-const BottomAppBar: React.FC<Props> = ({ elevation, style, children }) => {
+const BottomAppBar: React.FC<Props> = ({ elevation, className, style, children }) => {
     return (
         <Surface
             elevation={elevation}
+            className={className}
             style={{
                 position: 'fixed',
                 bottom: 0,

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../theme/Theme';
 import Surface from './Surface';
+import './Page.css';
 
 interface Props {
     style?: React.CSSProperties;
@@ -13,8 +14,6 @@ const Page: React.FC<Props> = ({ style, children }) => {
     return (
         <Surface
             style={{
-                display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'center',
                 position: 'fixed',
                 top: 0,
@@ -27,12 +26,7 @@ const Page: React.FC<Props> = ({ style, children }) => {
                 ...style,
             }}
         >
-            <div
-                style={{
-                    maxWidth: 800,
-                    paddingBottom: 80,
-                }}
-            >
+            <div className="page-content">
                 {children}
             </div>
         </Surface>

@@ -7,15 +7,16 @@ import NavigationBarItem from '../ui/components/NavigationBarItem';
 import { useNavigate } from 'react-router-dom';
 
 interface AppNavBarProps {
+    className?: string;
     style?: React.CSSProperties;
     selectedItem?: 'home' | 'wholesomeware';
 }
 
-const AppNavBar: React.FC<AppNavBarProps> = ({ style, selectedItem }) => {
+const AppNavBar: React.FC<AppNavBarProps> = ({ className, style, selectedItem }) => {
     const navigate = useNavigate();
 
     return (
-        <BottomAppBar style={{ ...style }}>
+        <BottomAppBar className={className} style={{ ...style }}>
             <NavigationBarItem
                 icon={<Icon
                     path={mdiHome}

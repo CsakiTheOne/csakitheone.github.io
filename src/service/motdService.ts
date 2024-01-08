@@ -1,7 +1,12 @@
 import motd from '../res/values/motd.json';
 
 export function setRandomMotd() {
-    const motdIndex = Math.floor(Math.random() * motd.length);
-    const motdText = motd[motdIndex];
-    document.title = motdText;
+    function random(min: number, max: number) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+    const allMotd = [
+        ...motd,
+    ]
+    const selectedMotd = allMotd[random(0, motd.length)];
+    document.title = selectedMotd;
 }

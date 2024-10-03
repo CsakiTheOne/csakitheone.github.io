@@ -12,7 +12,7 @@
             alert("Írj rám, hozzunk össze egy talit 😄");
             window.location = "https://www.messenger.com/t/100024477404430/";
         }}>
-            Emlék hozzáadása
+            + Emlék hozzáadása
         </button>
     </p>
     <h3>2024. Október 4.</h3>
@@ -109,6 +109,18 @@
     p.poem {
         font-family: "Times New Roman", Times, serif;
         font-style: italic;
+    }
+
+    button {
+        appearance: none;
+        border: none;
+        background: #c0d1fc;
+        color: #000;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+        box-shadow: #00000080 0 3px 0;
     }
 
     a {

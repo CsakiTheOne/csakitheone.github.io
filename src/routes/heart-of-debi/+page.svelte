@@ -6,8 +6,7 @@
 </script>
 
 <main>
-    <h3>...</h3>
-    <p>
+    <p style="text-align: center;">
         <button onclick={() => {
             alert("Írj rám, hozzunk össze egy talit 😄");
             window.location = "https://www.messenger.com/t/100024477404430/";

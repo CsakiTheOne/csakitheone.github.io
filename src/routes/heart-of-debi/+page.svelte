@@ -1,4 +1,10 @@
 <script>
+    import firstDateImage1 from "$lib/debi/album/first-date/PXL_20241004_162610482.jpg";
+    import firstDateImage2 from "$lib/debi/album/first-date/PXL_20241004_155041641.MP.jpg";
+    import firstDateImage3 from "$lib/debi/album/first-date/IMG_20241005_122234_704.jpg";
+    import firstDateImage4 from "$lib/debi/album/first-date/IMG_20241005_122230_577.jpg";
+
+
     let startDate = $state(new Date(2024, 9, 4));
     let daysSinceStart = $derived(
         Math.floor((Date.now() - startDate.getTime()) / 1000 / 60 / 60 / 24),
@@ -15,6 +21,11 @@
         </button>
     </p>
     <h3>2024. Október 4.</h3>
+    <img src={firstDateImage1} alt="">
+    <img src={firstDateImage2} alt="">
+    <img src={firstDateImage3} alt="">
+    <img src={firstDateImage4} alt="">
+    <h3>A szív</h3>
     <p class="poem">
         A távolság szárazság, ami elhervaszt egy virágot.<br />
         A távolság radír, ami kitörli a színeket és szürkévé teszi a világot.<br
@@ -127,5 +138,10 @@
         color: #822;
         padding: 2px;
         text-decoration: underline;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 </style>

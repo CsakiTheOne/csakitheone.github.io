@@ -4,7 +4,6 @@
     import firstDateImage3 from "$lib/debi/album/first-date/IMG_20241005_122234_704.jpg";
     import firstDateImage4 from "$lib/debi/album/first-date/IMG_20241005_122230_577.jpg";
 
-
     let startDate = $state(new Date(2024, 9, 4));
     let daysSinceStart = $derived(
         Math.floor((Date.now() - startDate.getTime()) / 1000 / 60 / 60 / 24),
@@ -13,18 +12,53 @@
 
 <main>
     <p style="text-align: center;">
-        <button onclick={() => {
-            alert("Írj rám, hozzunk össze egy talit 😄");
-            window.location = "https://www.messenger.com/t/100024477404430/";
-        }}>
+        <button
+            onclick={() => {
+                alert("Írj rám, hozzunk össze egy talit 😄");
+                window.location =
+                    "https://www.messenger.com/t/100024477404430/";
+            }}
+        >
             + Emlék hozzáadása
         </button>
     </p>
+    <h3>2024. Október 10.</h3>
+    <p>
+        Nem a mai dátum vagy véletlenül? Csak mert 10/10 vagy. És épp ezért
+        olyan nehéz a helyzet. A zenei stílusban még keressük azt a közös pontet
+        😄 de más tereken egyre jobban látom, hogy mennyire ellennénk. Igényled
+        a párod közelségét és az érintést és ezzel ugyanígy vagyok.
+        Legszívesebben megkérdezném, hogy nem hagyjuk ki az ismerkedés fázist és
+        nem költözünk össze rögtön? Tudom, ez nem így működik, viszont
+        megkönnyítené a dolgokat, ha nem csak egy-egy délutánokra utazhatnék
+        oda. Szóval... Nem ismersz Egerszegen valami jó szálláshelyet? 😂 Ha
+        annyit megteszel, hogy utánajársz, hogy valamelyik egyetemi koli
+        kivehető-e nem hallgatók számára vagy van-e egyéb kinda olcsóbb
+        lehetőség, akkor megígérem, hogy egy hétvégére meglátogatlak.
+    </p>
+    <div class="card">
+        <h4>Üzlet ajánlat</h4>
+        <ul>
+            <li><b>Adsz:</b> infót szállás lehetőségekről Zalaegerszegen</li>
+            <li><b>Kapsz:</b> egy teljes közös hétvége (2 vagy 3 nap)</li>
+        </ul>
+    </div>
+    <p>
+        Btw kicsit lelkiztem egy közös ismerőssel és tőle is kérdeztem, hogy
+        nem-e tud valami szállást. 😅 Sajnos nem, de egy próbát megért.
+    </p>
+    <p>
+        Oh, amúgy esetleg írj, hogyha ez a kis napló szerű dolog tetszett a
+        szíven. Nem tudtam mit írjak rá, hogy nem talizunk, de mégis akartam
+        valamit ennyi idő után. Szóval mondd, hogy jöhet-e még ilyen vagy
+        hagyjuk meg ezt a szívet a közös emlékeknek. Amik először ritkák lesznek
+        (ha lesznek), de pont ezért lennének különlegesek.
+    </p>
     <h3>2024. Október 4.</h3>
-    <img src={firstDateImage1} alt="">
-    <img src={firstDateImage2} alt="">
-    <img src={firstDateImage3} alt="">
-    <img src={firstDateImage4} alt="">
+    <img src={firstDateImage1} alt="" />
+    <img src={firstDateImage2} alt="" />
+    <img src={firstDateImage3} alt="" />
+    <img src={firstDateImage4} alt="" />
     <h3>A szív</h3>
     <p class="poem">
         A távolság szárazság, ami elhervaszt egy virágot.<br />
@@ -143,5 +177,15 @@
     img {
         width: 100%;
         height: auto;
+    }
+
+    li {
+        margin-left: 1rem;
+    }
+
+    .card {
+        background: #ffffff44;
+        padding: 1rem;
+        border-radius: 1rem;
     }
 </style>

@@ -11,6 +11,9 @@
 </script>
 
 <main>
+    💔
+</main>
+<!--main>
     <p style="text-align: center;">
         <button
             onclick={() => {
@@ -97,7 +100,7 @@
         Ez a szív {daysSinceStart} napja dobog.<br />
         ({startDate.toLocaleDateString()})
     </p>
-</main>
+</main-->
 
 <style>
     :global(*) {

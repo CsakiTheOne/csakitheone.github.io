@@ -11,10 +11,21 @@
 </script>
 
 <main>
-    💔
-</main>
-<!--main>
-    <p style="text-align: center;">
+    <h3>2025. Március 11.</h3>
+    <div class="card">
+        <iframe
+        width="100%"
+        style="aspect-ratio: 4/3;"
+        src="https://www.youtube.com/embed/Ilfvk8NY1Nk?si=LI--aTk2qNq3wp2j"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        ></iframe>
+        <p>Boldog Szülinapot Debi! 🎂</p>
+    </div>
+    <!--p style="text-align: center;">
         <button
             onclick={() => {
                 alert("Írj rám, hozzunk össze egy talit 😄");
@@ -57,11 +68,6 @@
         hagyjuk meg ezt a szívet a közös emlékeknek. Amik először ritkák lesznek
         (ha lesznek), de pont ezért lennének különlegesek.
     </p>
-    <h3>2024. Október 4.</h3>
-    <img src={firstDateImage1} alt="" />
-    <img src={firstDateImage2} alt="" />
-    <img src={firstDateImage3} alt="" />
-    <img src={firstDateImage4} alt="" />
     <h3>A szív</h3>
     <p class="poem">
         A távolság szárazság, ami elhervaszt egy virágot.<br />
@@ -72,27 +78,32 @@
         Hát adj így egy kezet!<br />
         Ha itt leszel, én is itt leszek. Vonat jegyet veszek.<br />
         És... Bárhol is vagy... Megyek.<br />
-    </p>
-
-    <p>
-        Legalábbis erre lennék képes, ha nem egyedül küzdök. És még többre is,
-        ahogy azt a <a
+        </p>
+        
+        <p>
+            Legalábbis erre lennék képes, ha nem egyedül küzdök. És még többre is,
+            ahogy azt a <a
             href="https://play.google.com/store/apps/details?id=com.csakitheone.distanthug"
             >Distant Hug</a
-        > létezése bizonyítja. 😄
-    </p>
-    <p>
-        Emlegettem párszor, de gondoltam alkotok Neked is valamit: Ezt a szívet.
-        Bár egy egyszerű tárgynak látszik, amit vihetsz ide-oda, de hogy mi van
-        beleírva, azt bárhol, bármikor - és a legfontosabb - bármilyen messziről
-        át tudom írni. Írhatok a szívbe a talikról kis szövegeket, közös
-        képeket, videókat valami buliról ahová elmentünk vagy bármi mást. ÉS MÉG
-        A TELÓDON SE FOGLAL HELYET! 😂
-    </p>
-    <p>
-        Ha van ötleted, hogy mit írjak bele, zaklass bármikor! Remélem, hogy ez
-        erőt ad és közelebb hoz / közel tart egymáshoz minket.
-    </p>
+            > létezése bizonyítja. 😄
+            </p>
+            <p>
+                Emlegettem párszor, de gondoltam alkotok Neked is valamit: Ezt a szívet.
+                Bár egy egyszerű tárgynak látszik, amit vihetsz ide-oda, de hogy mi van
+                beleírva, azt bárhol, bármikor - és a legfontosabb - bármilyen messziről
+                át tudom írni. Írhatok a szívbe a talikról kis szövegeket, közös
+                képeket, videókat valami buliról ahová elmentünk vagy bármi mást. ÉS MÉG
+                A TELÓDON SE FOGLAL HELYET! 😂
+                </p>
+                <p>
+                    Ha van ötleted, hogy mit írjak bele, zaklass bármikor! Remélem, hogy ez
+                    erőt ad és közelebb hoz / közel tart egymáshoz minket.
+                    </p-->
+    <h3>2024. Október 4.</h3>
+    <img src={firstDateImage1} alt="" />
+    <img src={firstDateImage2} alt="" />
+    <img src={firstDateImage3} alt="" />
+    <img src={firstDateImage4} alt="" />
 
     <hr />
 
@@ -100,7 +111,7 @@
         Ez a szív {daysSinceStart} napja dobog.<br />
         ({startDate.toLocaleDateString()})
     </p>
-</main-->
+</main>
 
 <style>
     :global(*) {
@@ -180,6 +191,12 @@
     img {
         width: 100%;
         height: auto;
+    }
+
+    iframe, img {
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
     }
 
     li {

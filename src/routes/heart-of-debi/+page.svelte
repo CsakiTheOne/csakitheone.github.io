@@ -1,116 +1,126 @@
-<script>
-    import firstDateImage1 from "$lib/debi/album/first-date/PXL_20241004_162610482.jpg";
-    import firstDateImage2 from "$lib/debi/album/first-date/PXL_20241004_155041641.MP.jpg";
-    import firstDateImage3 from "$lib/debi/album/first-date/IMG_20241005_122234_704.jpg";
-    import firstDateImage4 from "$lib/debi/album/first-date/IMG_20241005_122230_577.jpg";
+<script lang="ts">
+    import csvData from "$lib/debi/tanulókártyák.csv?raw";
+    
+    // Parse CSV data
+    let cards: { question: string; answer: string }[] = $state([]);
+    let currentCardIndex = $state(0);
+    let showAnswer = $state(false);
+    let score = $state(0);
+    let answeredCards = $state(0);
 
-    let startDate = $state(new Date(2024, 9, 4));
-    let daysSinceStart = $derived(
-        Math.floor((Date.now() - startDate.getTime()) / 1000 / 60 / 60 / 24),
-    );
+    // Parse CSV on component initialization
+    $effect(() => {
+        const lines = csvData.trim().split('\n');
+        cards = lines.map(line => {
+            const [question, answer] = line.split(',').map(part => part.trim());
+            return { question, answer };
+        });
+    });
+
+    const currentCard = $derived(cards[currentCardIndex] || { question: '', answer: '' });
+    const progress = $derived(cards.length > 0 ? Math.round((currentCardIndex / cards.length) * 100) : 0);
+
+    function showAnswerHandler() {
+        showAnswer = true;
+    }
+
+    function nextCard() {
+        if (currentCardIndex < cards.length - 1) {
+            currentCardIndex++;
+            showAnswer = false;
+        }
+    }
+
+    function previousCard() {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+            showAnswer = false;
+        }
+    }
+
+    function markCorrect() {
+        if (!showAnswer) return;
+        score++;
+        answeredCards++;
+        nextCard();
+    }
+
+    function markIncorrect() {
+        if (!showAnswer) return;
+        answeredCards++;
+        nextCard();
+    }
+
+    function resetGame() {
+        currentCardIndex = 0;
+        showAnswer = false;
+        score = 0;
+        answeredCards = 0;
+    }
+
+    function shuffleCards() {
+        cards = [...cards].sort(() => Math.random() - 0.5);
+        resetGame();
+    }
 </script>
 
 <main>
-    <h3>2025. Március 11.</h3>
-    <div class="card">
-        <iframe
-        width="100%"
-        style="aspect-ratio: 4/3;"
-        src="https://www.youtube.com/embed/Ilfvk8NY1Nk?si=LI--aTk2qNq3wp2j"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        ></iframe>
-        <p>Boldog Szülinapot Debi! 🎂</p>
+    <div class="header">
+        <h1>Közgazdaságtan tanuló kártyák</h1>
+        <div class="stats">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: {progress}%"></div>
+            </div>
+            <p>{currentCardIndex + 1} / {cards.length}</p>
+            <p>Pontszám: {score} / {answeredCards}</p>
+        </div>
     </div>
-    <!--p style="text-align: center;">
-        <button
-            onclick={() => {
-                alert("Írj rám, hozzunk össze egy talit 😄");
-                window.location =
-                    "https://www.messenger.com/t/100024477404430/";
-            }}
-        >
-            + Emlék hozzáadása
-        </button>
-    </p>
-    <h3>2024. Október 10.</h3>
-    <p>
-        Nem a mai dátum vagy véletlenül? Csak mert 10/10 vagy. És épp ezért
-        olyan nehéz a helyzet. A zenei stílusban még keressük azt a közös pontet
-        😄 de más tereken egyre jobban látom, hogy mennyire ellennénk. Igényled
-        a párod közelségét és az érintést és ezzel ugyanígy vagyok.
-        Legszívesebben megkérdezném, hogy nem hagyjuk ki az ismerkedés fázist és
-        nem költözünk össze rögtön? Tudom, ez nem így működik, viszont
-        megkönnyítené a dolgokat, ha nem csak egy-egy délutánokra utazhatnék
-        oda. Szóval... Nem ismersz Egerszegen valami jó szálláshelyet? 😂 Ha
-        annyit megteszel, hogy utánajársz, hogy valamelyik egyetemi koli
-        kivehető-e nem hallgatók számára vagy van-e egyéb kinda olcsóbb
-        lehetőség, akkor megígérem, hogy egy hétvégére meglátogatlak.
-    </p>
-    <div class="card">
-        <h4>Üzlet ajánlat</h4>
-        <ul>
-            <li><b>Adsz:</b> infót szállás lehetőségekről Zalaegerszegen</li>
-            <li><b>Kapsz:</b> egy teljes közös hétvége (2 vagy 3 nap)</li>
-        </ul>
-    </div>
-    <p>
-        Btw kicsit lelkiztem egy közös ismerőssel és tőle is kérdeztem, hogy
-        nem-e tud valami szállást. 😅 Sajnos nem, de egy próbát megért.
-    </p>
-    <p>
-        Oh, amúgy esetleg írj, hogyha ez a kis napló szerű dolog tetszett a
-        szíven. Nem tudtam mit írjak rá, hogy nem talizunk, de mégis akartam
-        valamit ennyi idő után. Szóval mondd, hogy jöhet-e még ilyen vagy
-        hagyjuk meg ezt a szívet a közös emlékeknek. Amik először ritkák lesznek
-        (ha lesznek), de pont ezért lennének különlegesek.
-    </p>
-    <h3>A szív</h3>
-    <p class="poem">
-        A távolság szárazság, ami elhervaszt egy virágot.<br />
-        A távolság radír, ami kitörli a színeket és szürkévé teszi a világot.<br
-        />
-        A távolság kés, ami elvághat egymástól embereket.<br />
-        De könnyű leküzdeni, nem kell más, csak egy kis igyekezet.<br />
-        Hát adj így egy kezet!<br />
-        Ha itt leszel, én is itt leszek. Vonat jegyet veszek.<br />
-        És... Bárhol is vagy... Megyek.<br />
-        </p>
-        
-        <p>
-            Legalábbis erre lennék képes, ha nem egyedül küzdök. És még többre is,
-            ahogy azt a <a
-            href="https://play.google.com/store/apps/details?id=com.csakitheone.distanthug"
-            >Distant Hug</a
-            > létezése bizonyítja. 😄
-            </p>
-            <p>
-                Emlegettem párszor, de gondoltam alkotok Neked is valamit: Ezt a szívet.
-                Bár egy egyszerű tárgynak látszik, amit vihetsz ide-oda, de hogy mi van
-                beleírva, azt bárhol, bármikor - és a legfontosabb - bármilyen messziről
-                át tudom írni. Írhatok a szívbe a talikról kis szövegeket, közös
-                képeket, videókat valami buliról ahová elmentünk vagy bármi mást. ÉS MÉG
-                A TELÓDON SE FOGLAL HELYET! 😂
-                </p>
-                <p>
-                    Ha van ötleted, hogy mit írjak bele, zaklass bármikor! Remélem, hogy ez
-                    erőt ad és közelebb hoz / közel tart egymáshoz minket.
-                    </p-->
-    <h3>2024. Október 4.</h3>
-    <img src={firstDateImage1} alt="" />
-    <img src={firstDateImage2} alt="" />
-    <img src={firstDateImage3} alt="" />
-    <img src={firstDateImage4} alt="" />
 
-    <hr />
+    {#if cards.length > 0}
+        <div class="card-container">
+            <div class="card" class:flipped={showAnswer}>
+                <div class="card-front">
+                    <h2>Kérdés</h2>
+                    <p class="question">{currentCard.question}</p>
+                    <button class="show-answer-btn" onclick={showAnswerHandler}>
+                        Válasz megmutatása
+                    </button>
+                </div>
+                
+                <div class="card-back">
+                    <h2>Válasz</h2>
+                    <p class="answer">{currentCard.answer}</p>
+                    <div class="answer-buttons">
+                        <button class="correct-btn" onclick={markCorrect}>
+                            ✓ Tudtam
+                        </button>
+                        <button class="incorrect-btn" onclick={markIncorrect}>
+                            ✗ Nem tudtam
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <p style="text-align: center;">
-        Ez a szív {daysSinceStart} napja dobog.<br />
-        ({startDate.toLocaleDateString()})
-    </p>
+        <div class="controls">
+            <button class="nav-btn" onclick={previousCard} disabled={currentCardIndex === 0}>
+                ← Előző
+            </button>
+            
+            <div class="control-buttons">
+                <button class="control-btn" onclick={resetGame}>Újrakezdés</button>
+                <button class="control-btn" onclick={shuffleCards}>Keverés</button>
+            </div>
+            
+            <button class="nav-btn" onclick={nextCard} disabled={currentCardIndex === cards.length - 1}>
+                Következő →
+            </button>
+        </div>
+    {:else}
+        <div class="loading">
+            <p>Kártyák betöltése...</p>
+        </div>
+    {/if}
 </main>
 
 <style>
@@ -121,91 +131,263 @@
     }
 
     :global(body) {
-        background-color: #ff9aaa;
+        background-color: #d6c5c7;
         color: #000;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     main {
-        display: grid;
-        grid-template-columns: [full-start] 1rem [breakout-start] 1rem [content-start] 1fr [content-end] 1rem [breakout-end] 1rem [full-end];
-        row-gap: 1rem;
-        padding: 1rem 0;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        min-height: 100vh;
     }
 
-    main * {
-        grid-column: content;
-    }
-
-    h1,
-    h2,
-    h3 {
-        background-color: #c0d1fc;
-        padding: 0.5rem;
+    .header {
         text-align: center;
-        grid-column: full;
+        margin-bottom: 30px;
     }
 
-    .breakout {
-        grid-column: breakout;
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #2c1810;
     }
 
-    .full-width {
-        grid-column: full;
+    .stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
-    hr {
-        border: 1px solid #000;
-        width: 100%;
-        grid-column: full;
+    .progress-bar {
+        width: 200px;
+        height: 8px;
+        background-color: #a89090;
+        border-radius: 4px;
+        overflow: hidden;
     }
 
-    p {
-        font-size: 1.2rem;
+    .progress-fill {
+        height: 100%;
+        background-color: #4a6741;
+        transition: width 0.3s ease;
     }
 
-    p.poem {
-        font-family: "Times New Roman", Times, serif;
-        font-style: italic;
-    }
-
-    button {
-        appearance: none;
-        border: none;
-        background: #c0d1fc;
-        color: #000;
+    .stats p {
         font-weight: bold;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        border-radius: 1rem;
-        box-shadow: #00000080 0 3px 0;
+        font-size: 1.1rem;
+        color: #2c1810;
     }
 
-    a {
-        background: #c0d1fc;
-        color: #822;
-        padding: 2px;
-        text-decoration: underline;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    iframe, img {
-        display: block;
-        width: 100%;
-        border-radius: 1rem;
-    }
-
-    li {
-        margin-left: 1rem;
+    .card-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        perspective: 1000px;
     }
 
     .card {
-        background: #ffffff44;
-        padding: 1rem;
-        border-radius: 1rem;
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        cursor: pointer;
+    }
+
+    .card.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-front {
+        background: linear-gradient(135deg, #f5f1f2, #e8dfe0);
+        border: 2px solid #c4a8ab;
+    }
+
+    .card-back {
+        background: linear-gradient(135deg, #e8f4e8, #d4e8d4);
+        border: 2px solid #9db89d;
+        transform: rotateY(180deg);
+    }
+
+    .card-front h2 {
+        color: #2c1810;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .card-back h2 {
+        color: #1a3a1a;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .question, .answer {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    .question {
+        color: #2c1810;
+    }
+
+    .answer {
+        color: #1a3a1a;
+        font-weight: 500;
+    }
+
+    .show-answer-btn {
+        background-color: #8b7a7c;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .show-answer-btn:hover {
+        background-color: #766568;
+    }
+
+    .answer-buttons {
+        display: flex;
+        gap: 20px;
+    }
+
+    .correct-btn, .incorrect-btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: bold;
+    }
+
+    .correct-btn {
+        background-color: #4a6741;
+        color: white;
+    }
+
+    .correct-btn:hover {
+        background-color: #3e5537;
+        transform: translateY(-2px);
+    }
+
+    .incorrect-btn {
+        background-color: #b85450;
+        color: white;
+    }
+
+    .incorrect-btn:hover {
+        background-color: #a04844;
+        transform: translateY(-2px);
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .control-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-btn, .control-btn {
+        padding: 10px 20px;
+        border: 2px solid #8b7a7c;
+        background-color: #f5f1f2;
+        color: #2c1810;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+    }
+
+    .nav-btn:hover, .control-btn:hover {
+        background-color: #8b7a7c;
+        color: white;
+        transform: translateY(-1px);
+    }
+
+    .nav-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .nav-btn:disabled:hover {
+        background-color: #f5f1f2;
+        color: #2c1810;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .loading p {
+        font-size: 1.3rem;
+        color: #2c1810;
+    }
+
+    @media (max-width: 600px) {
+        .card {
+            height: 350px;
+        }
+        
+        .card-front, .card-back {
+            padding: 20px;
+        }
+        
+        .question, .answer {
+            font-size: 1.1rem;
+        }
+        
+        .controls {
+            justify-content: center;
+        }
+        
+        .stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .progress-bar {
+            width: 150px;
+        }
     }
 </style>

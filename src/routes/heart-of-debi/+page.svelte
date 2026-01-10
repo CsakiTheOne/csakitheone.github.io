@@ -12,8 +12,34 @@
     $effect(() => {
         const lines = csvData.trim().split('\n');
         cards = lines.map(line => {
-            const [question, answer] = line.split(',').map(part => part.trim());
-            return { question, answer };
+            // Handle CSV with quoted fields that may contain commas
+            const parseCSVLine = (line: string) => {
+                const result = [];
+                let current = '';
+                let inQuotes = false;
+                
+                for (let i = 0; i < line.length; i++) {
+                    const char = line[i];
+                    
+                    if (char === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (char === ',' && !inQuotes) {
+                        result.push(current.trim());
+                        current = '';
+                    } else {
+                        current += char;
+                    }
+                }
+                
+                result.push(current.trim());
+                return result;
+            };
+            
+            const [question, answer] = parseCSVLine(line);
+            return { 
+                question: question?.replace(/^"|"$/g, '') || '', 
+                answer: answer?.replace(/^"|"$/g, '') || '' 
+            };
         });
     });
 

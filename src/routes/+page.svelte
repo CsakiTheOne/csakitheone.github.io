@@ -23,7 +23,7 @@
             <img src={logoMoriForgatos} alt="Mori Forgatos Logo" />
         </a>
     </div>
-    <p>
+    <p class="glass-card">
         Coding since 2012. In 2022, to celebrate 10 years of coding, I published
         this <a href="./10 year OG pack.zip">10 year OG pack</a>.
     </p>
@@ -71,6 +71,18 @@
         gap: 1rem;
         flex-wrap: wrap;
         width: 100%;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 1rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        max-width: 600px;
+        text-align: center;
     }
 
     img {

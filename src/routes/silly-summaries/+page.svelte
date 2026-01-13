@@ -100,7 +100,7 @@ Csáki és a csapat épp egy napi összefoglalót terveztek neked írni, hogy ke
         background-color: #5865f2;
         color: white;
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 8px 12px;
         cursor: pointer;
         font-size: 1rem;

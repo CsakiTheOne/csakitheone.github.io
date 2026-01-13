@@ -14,7 +14,7 @@
     <a href="https://kolora.web.app">
         <img src={logoKolora} alt="Kolora Logo" />
     </a>
-    <a href="/wholesomeware">
+    <a href="https://play.google.com/store/apps/dev?id=8177011913013516936">
         <img src={logoWholesomeWare} alt="WholesomeWare Logo" />
     </a>
     <a href="https://moriforgatos.hu/">

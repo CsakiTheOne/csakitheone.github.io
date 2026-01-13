@@ -11,15 +11,22 @@
 </script>
 
 <div class="screen">
-    <a href="https://kolora.web.app">
-        <img src={logoKolora} alt="Kolora Logo" />
-    </a>
-    <a href="https://play.google.com/store/apps/dev?id=8177011913013516936">
-        <img src={logoWholesomeWare} alt="WholesomeWare Logo" />
-    </a>
-    <a href="https://moriforgatos.hu/">
-        <img src={logoMoriForgatos} alt="Mori Forgatos Logo" />
-    </a>
+    <div></div>
+    <div class="logos">
+        <a href="https://kolora.web.app">
+            <img src={logoKolora} alt="Kolora Logo" />
+        </a>
+        <a href="https://play.google.com/store/apps/dev?id=8177011913013516936">
+            <img src={logoWholesomeWare} alt="WholesomeWare Logo" />
+        </a>
+        <a href="https://moriforgatos.hu/">
+            <img src={logoMoriForgatos} alt="Mori Forgatos Logo" />
+        </a>
+    </div>
+    <p>
+        Coding since 2012. In 2022, to celebrate 10 years of coding, I published
+        this <a href="./10 year OG pack.zip">10 year OG pack</a>.
+    </p>
 </div>
 
 <style>
@@ -37,7 +44,7 @@
 
     .screen {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         height: 100svh;
@@ -56,10 +63,24 @@
         animation: animBackgroundPos 20s infinite;
     }
 
+    .logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
     img {
         width: 20vw;
         max-width: 150px;
         border-radius: 50%;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .screen a {
+        color: turquoise;
     }
 </style>

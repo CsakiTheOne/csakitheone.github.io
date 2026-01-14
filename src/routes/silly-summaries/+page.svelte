@@ -90,6 +90,54 @@ Média: Szóba került a Jujutsu Kaisen 3. évada és a Wednesday sorozat is.
 "ne az ujjam kaparjam a vizsgafeszkó miatt, hanem a lakkot... life hack"`,
             ],
         },
+        day14: {
+            geminiSummary: `#csevegő szoba
+A nap folyamán a társaság tagjai (ismeretlen vok, cherry, Andris, Csáki és Szkera) különböző témákat érintettek a mindennapi kalandoktól a technikai kérdésekig:
+
+Séta a hóban: Reggel ismeretlen vok és cherry a havas utakon való közlekedés nehézségeiről beszélgettek, miközben mindketten a suli felé tartottak. Végül össze is futottak az iskola előtt.
+
+Sorozatok és Tanulás: Andris sorozatokat ajánlott Csákinak (Love, Death & Robots, Secret Level), miközben Szkera a nagy vizsgája (diploma előtti „kipakolás”) miatt izgult, ahol ötvös/asztalos témákban ugratták egymást.
+
+Fotózás és Modellezés: Délután ismeretlen vok megosztotta a nap folyamán készült fotókat cherryvel, aki el volt ájulva a képek minőségétől, és felajánlotta, hogy a jövőben is szívesen lesz a modellje.
+
+Technológia és Fordítás: Csáki felvetette, hogy készít egy programot a Sky nevű játék magyarításához, de ismeretlen vok jelezte, hogy neki nincs rá szüksége. Csáki emellett egy iPhone-okat lefagyasztó hibáról is megosztott egy videót: How To Crash Any iPhone.
+
+#pajzán-zárka szoba
+Ebben a szobában jóval kaotikusabb és kötetlenebb volt a hangulat, sok belső poénnal:
+
+Gasztro-horror: Diszlexiás Harcihajó olyan meredek ötletekkel állt elő, mint a nutellás vodka és az olívabogyótól „beálló” macskák, amit a többiek (különösen cherry) határozottan elutasítottak.
+
+Olcsó receptek: A hangulat később konstruktívabb lett, amikor ismeretlen vok megosztotta a „ChatGPT-vel olcsósított” koreai csirke receptjét, valamint tippeket adott olcsó carbonarához és müzli-joghurt kombinációkhoz. Inspirációként egy vlogger csatornáját is bedobta: annika's leaf.
+
+Pécs vs. Győr: Vita alakult ki a városokról; Diszlexiás Harcihajó győri, míg a többiek inkább Pécshez kötődnek. Felemlegettek régi részeg sztorikat (pl. a pécsi Downtown bárt) és győri közlekedési káoszokat.
+
+Gondoskodás: A beszélgetés végén a tagok egymás ugratása mellett figyeltek is egymásra: Diszlexiás Harcihajó és ismeretlen vok is győzködték a görcsökkel küzdő cherryt, hogy mindenképpen egyen rendes ételt.
+
+Összességében: Egy mozgalmas nap volt, tele vizsgadrukkal, havas sétával, közös fotózással és rengeteg kaotikus, étkezéssel kapcsolatos poénkodással.`,
+            wisecracks: [
+                `Andris szakmai jóslata: Amikor Szkera a nagy vizsgája miatt izgult:
+
+"Hajrá hajrá, diplomás asztalos lesz belőled!!!" – Amire Szkera kikérte magának, hogy ő nem csak padokat csinál, mire Andris: "Asztalt meg széket is?"`,
+                `Diszlexiás Harcihajó önkritikája:
+
+"A legveszélyesebb, hogy elcsúszok és leesek az IQ-mra xddd"`,
+                `Cherry és az alkohol hatásai:
+
+"Lavór kapitánnyá változok és mindenkit meg akarok dugni sodrófával."`,
+                `A "mogyorós vodka" incidens: Diszlexiás Harcihajó receptötlete, amit Cherry rövidre zárt:
+
+"Ez visítófosásnak és sugárhányásnak hangzik, kihagyom."`,
+                `Ismeretlen vok reakciója Cherry fotóira:
+
+"Paid actor a csepegő víz. Kedvenc képem lesz."`,
+                `Szkera vizsgája: Ez volt a nap legkomolyabb tétje, hiszen most dőlt el, hogy diplomázhat-e.`,
+                `A nagy "találkozás": Cherry és ismeretlen vok reggeli véletlen (vagy fél-véletlen) találkozása a suli előtt a padnál, ami egy kis ijesztgetésbe és sok "hehe"-zésbe torkollott.`,
+                `A fotózás sikere: Úgy tűnik, ismeretlen vok és cherry között egy gyümölcsöző "fotós-modell" együttműködés vette kezdetét, aminek cherry kifejezetten örült.`,
+                `Csáki és a fejlesztés: Csáki felajánlotta a fordító modját, és bár a fogadtatás vegyes volt, kiderült, hogy ő készítette a Distant Hug nevű dolgot is, ami cherry szerint nélkülözhetetlen.`,
+                `A nap "tanulsága" (pro-tipp):
+Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, és tedd be a mikróba – ismeretlen vok szerint ez a túlélés kulcsa.`,
+            ],
+        },
     };
 
     const selectedDayContent = $derived(
@@ -144,7 +192,12 @@ Média: Szóba került a Jujutsu Kaisen 3. évada és a Wednesday sorozat is.
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         color: white;
     }
 

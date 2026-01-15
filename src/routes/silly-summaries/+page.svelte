@@ -171,7 +171,15 @@ Foodporn: ismeretlen vok lőtt egy képet egy gigantikus (ehetetlennek tűnő) �
 Az egyik link egy M2 Petőfi TV riportra mutat, ahol Bíró Ada (az MI műsorvezető) adott vacsorát.
 
 Csáki megosztott egy Sonic the Hedgehog 35. évfordulós videót is.`,
-            wisecracks: [],
+            wisecracks: [
+                `Andris a gasztronómiáról: „Hurka kolbász almapaprika legjobb kaja” – Rövid, tömör hitvallás a magyar konyha mellett.`,
+                `ismeretlen vok az önkritikáról (rajz kapcsán): „A takaró meg félúton eltünt XD” – Az animációs munka nehézségei egy mondatban.`,
+                `Andris Szkera "eltűnése" után: „@Szkera belettem scammelve ugyerzem” – Amikor a közös játék ígérete köddé válik.`,
+                `A kolis gourmet megoldás: Diszlexiás Harcihajó receptje a fagyasztott pizzára: félbe kell hajtani és beleerőltetni a melegszendvics-sütőbe. „10/10 bármikor.”`,
+                `A "rakéta": Pepe megjegyzése a #pajzán-zárka szobában, miszerint egy 32 éves ismerőse rajzolt nekik egy rakétát, amit mindenki másnak sikerült félreértenie.`,
+                `Bíró Ada és a vacsora: Csáki rátalált egy videóra, ahol a magyar mesterséges intelligencia-műsorvezető „vacsorát adott”, ami egyszerre tech-érdekesség és kicsit szürreális téma a csoportban.`,
+                `Külön említést érdemel: Diszlexiás Harcihajó "békás" üzenete Szkera számára, amit csak azért küldött, mert szerinte a békák jó fejek, vagy ha nem is, legalább zöldek.`,
+            ],
         },
     };
 

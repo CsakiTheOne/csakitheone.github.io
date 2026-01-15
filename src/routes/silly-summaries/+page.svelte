@@ -5,8 +5,6 @@
         .fill(0)
         .map((_, i) => i + startingDay);
 
-    let selectedDay = $state(today.getDate());
-
     const daysContent = {
         day12: {
             geminiSummary: `🎙️ AI és Ökológia
@@ -140,6 +138,7 @@ Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, é
         },
     };
 
+    let selectedDay = $state(startingDay);
     const selectedDayContent = $derived(
         Object.entries(daysContent)[selectedDay - startingDay]?.[1] || {},
     );
@@ -148,28 +147,33 @@ Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, é
 <header>
     <h2>Napi összefoglalók a Magyar Sky Közösség Dc szerverről</h2>
 </header>
+<div class="days">
+    {#each days as day}
+        <button
+            onclick={() => (selectedDay = day)}
+            class:unselected={selectedDay !== day}
+        >
+            Jan {day}.
+        </button>
+    {/each}
+</div>
+<hr />
 <main>
-    <div class="days">
-        {#each days as day}
-            <button
-                onclick={() => (selectedDay = day)}
-                class:unselected={selectedDay !== day}
-            >
-                Január {day}.
-            </button>
-        {/each}
-    </div>
-    <hr />
+    <h2>
+        <img
+            style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg"
+            alt=""
+        />
+        Gemini összefoglalója
+    </h2>
     {#if selectedDayContent.geminiSummary}
-        <h2>
-            <img
-                style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"
-                src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg"
-                alt=""
-            />
-            Gemini összefoglalója
-        </h2>
         <p class="gemini-summary">{selectedDayContent.geminiSummary}</p>
+    {:else}
+        <p>
+            Még nincs összefoglaló erre a napra. Általában este 10 és éjfél
+            között állítom össze.
+        </p>
     {/if}
     {#if selectedDayContent.wisecracks && selectedDayContent.wisecracks.length > 0}
         <h2>Aranyköpések és kiemelt üzenetek</h2>
@@ -178,6 +182,9 @@ Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, é
         {/each}
     {/if}
 </main>
+<footer>
+    <p>Made by Csáki w/ ❤️</p>
+</footer>
 
 <style>
     :global(*) {
@@ -215,6 +222,15 @@ Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, é
         padding: 16px;
     }
 
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        background-color: #121214;
+        color: #666;
+    }
+
     button {
         background-color: #5865f2;
         color: white;
@@ -223,6 +239,7 @@ Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, é
         padding: 8px 12px;
         cursor: pointer;
         font-size: 1rem;
+        white-space: nowrap;
     }
 
     button.unselected {

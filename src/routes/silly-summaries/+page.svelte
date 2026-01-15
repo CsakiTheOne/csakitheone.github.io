@@ -136,6 +136,43 @@ Gondoskodás: A beszélgetés végén a tagok egymás ugratása mellett figyelte
 Ha cupnoodle-t (zacskós tésztát) eszel, a maradék lébe üss egy tojást, és tedd be a mikróba – ismeretlen vok szerint ez a túlélés kulcsa.`,
             ],
         },
+        day15: {
+            geminiSummary: `#csevegő szoba
+A nap fő témája az extrémebb kollégiumi gasztronómia volt.
+
+Kaja-tippek: Csáki megosztotta a "Silly Summaries" 3. részét, amihez Andris hozzáfűzte, hogy a zacskós tészta életmentő. cherry, az átkozott és Diszlexiás Harcihajó kolis tippeket adtak: melegszendvics-sütőben szinte bármi elkészíthető (rántott sajt, nuggets, tükörtojás), sőt, a fagyasztott pizzát félbehajtva is abban a legjobb sütni.
+
+Gaming és Scammelés: Andris egész nap próbálta Szkodrát elérni egy közös játékra. Szkera többször is "bealudta" vagy elfelejtette a megbeszélt időpontot, ami miatt Andris úgy érezte, "be lett scammelve". Végül délután sikerült összehozniuk a hívást.
+
+Fejlesztés: Csáki belekezdett egy fordításkezelő programba WinUI 3 technológiával, hogy a Windows alkalmazásai végre modernebbül (lekerekített gombokkal és akril hatással) nézzenek ki.
+
+#más-játékok
+Silly avatar láz: cherry örömmel újságolta, hogy megszerezte a "Light Fury"-t, ami szerinte egy igazi királynő.
+
+Technikai újítás: Csáki mutatott egy új setupot, amivel egyszerre használ kontrollert és egeret (Switch Joycon és egér kombináció), ami Andris szerint is nagyon menő, de még tanulnia kell az irányítást.
+
+Évforduló: Csáki megosztotta a Sonic 35. évfordulós előzetesét, megjegyezve, hogy mindenki milyen öreg már.
+
+#pajzán-zárka
+Ebben a szobában főleg vizuális poénok és furcsaságok mentek. ismeretlen vok értetlenkedett valamin, amit látott, Pepe pedig megjegyezte, hogy valaki rajzolt nekik egy "rakétát", amit mások inkább kutyacsontnak néztek. Szóba került a drága Sissy kakaó és tej ára is.
+
+#memek-hihi
+Videók: Megosztották a klasszikus "székely meg a fia" videót, egy Apex Legends meme trailert, és egy videót Bíró Adáról (az AI műsorvezetőről).
+
+Politika és társadalom: Pepe Instagram-reelteket küldött (többek között a Békemenetről), amiből komolyabb beszélgetés alakult ki az ország állapotáról, az egészségügyről és az oktatásról. cherry kifejtette, hogy mennyire bosszantják a Facebookon a valóságtól elrugaszkodott kommentek.
+
+#rajzok és #egyéb-művészetek
+Animáció: ismeretlen vok mutatott egy alakuló animációt egy felkelő/nyújtózó karakterről. Bár a takaró félúton eltűnt, a "Godzilla-pózra" büszke.
+
+Foodporn: ismeretlen vok lőtt egy képet egy gigantikus (ehetetlennek tűnő) ételről, Pepe pedig kontrázott a saját sült krumplis menüjükkel.
+
+Érdekesség a videókból:
+
+Az egyik link egy M2 Petőfi TV riportra mutat, ahol Bíró Ada (az MI műsorvezető) adott vacsorát.
+
+Csáki megosztott egy Sonic the Hedgehog 35. évfordulós videót is.`,
+            wisecracks: [],
+        },
     };
 
     let selectedDay = $state(startingDay);

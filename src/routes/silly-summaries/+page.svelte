@@ -232,38 +232,34 @@ Konyhatündér tervek: ismeretlen vok és cherry receptekkel és "kajcsi ötlete
         day17: {
             geminiSummary: `Íme egy összefoglaló a Discord csatornák legutóbbi beszélgetéseiből:
 
-### **#csevegő (Általános csevegés)**
+#csevegő (Általános csevegés)
 
-* **Sínén Vagyunk app:** Andris az iOS verzió után érdeklődött, de Csáki jelezte, hogy nem fejleszt iOS-re. Szóba került a projekt monetizálása is, de Csáki hangsúlyozta, hogy ezeket hobbiként kezeli, és nem akar politikai (pl. Tisza párt) vagy jogi kockázatot vállalni (utalva az e-Szivacs készítőjének esetére).
-* **Egyetemi élet és vizsgák:** * **Andris** megkapta az új órarendjét, ahol a "Könyvelés 2" dominál.
-* **cherry, az átkozott** (biológushallgató) komoly kiégéssel küzd a vizsgaidőszak végén, és a tárgyfelvétel miatt stresszel (kevés a kreditje, kötválokat kell választania). Segítséget kért a tárgyak kiválasztásában, végül a *funkcionális szövettan* és a *mikrotechnika* tűnik befutónak.
-* **Diszlexiás Harcihajó** (gépészmérnök) az Audi-karral és a nehéz hőtan vizsgájával kapcsolatos tapasztalatait osztotta meg.
+- Sínén Vagyunk app: Andris az iOS verzió után érdeklődött, de Csáki jelezte, hogy nem fejleszt iOS-re. Szóba került a projekt monetizálása is, de Csáki hangsúlyozta, hogy ezeket hobbiként kezeli, és nem akar politikai (pl. Tisza párt) vagy jogi kockázatot vállalni (utalva az e-Szivacs készítőjének esetére).
+- Egyetemi élet és vizsgák:
+  - Andris megkapta az új órarendjét, ahol a "Könyvelés 2" dominál.
+  - cherry, az átkozott (biológushallgató) komoly kiégéssel küzd a vizsgaidőszak végén, és a tárgyfelvétel miatt stresszel (kevés a kreditje, kötválokat kell választania). Segítséget kért a tárgyak kiválasztásában, végül a funkcionális szövettan és a mikrotechnika tűnik befutónak.
+  - Diszlexiás Harcihajó (gépészmérnök) az Audi-karral és a nehéz hőtan vizsgájával kapcsolatos tapasztalatait osztotta meg.
+- Szerver-találkozó: Felmerült egy pécsi iszogatás ötlete. ismeretlen vok pénzügyi okok miatt lemondta volna, de Csáki és a többiek felajánlották, hogy kisegítik, mert a társaság a fontos. A szállást cherry ajánlotta fel.
+- Egyéb: Szóba került a teke (cherry öccsei sikeresen versenyeznek), és a fiúk megosztották egymással a PC/Laptop specifikációikat (Csáki workstation-je vs. Ákos Lenovo LOQ laptopja).
 
+#pajzán-zárka
 
-* **Szerver-találkozó:** Felmerült egy pécsi iszogatás ötlete. **ismeretlen vok** pénzügyi okok miatt lemondta volna, de Csáki és a többiek felajánlották, hogy kisegítik, mert a társaság a fontos. A szállást cherry ajánlotta fel.
-* **Egyéb:** Szóba került a teke (cherry öccsei sikeresen versenyeznek), és a fiúk megosztották egymással a PC/Laptop specifikációikat (Csáki workstation-je vs. Ákos Lenovo LOQ laptopja).
+- Algoritmusok: A csapat az Instagram és TikTok algoritmusairól beszélgetett, amik náluk leginkább edzős videókkal, "booktok" tartalmakkal vagy éppen lengébben öltözött hölgyekkel vannak tele.
+- Biológiai érdekességek: cherry egy NotebookLM podcast kapcsán hozott érdekességeket a lábasfejűekről, majd a beszélgetés elkalandozott a kacslabelű rákok extrém testarányú nemi szervéig, amit az evolúció egyik furcsaságaként emlegettek.
+- Iskolai emlékek: Egy korábbi osztálytárs (vagy iskolatárs) higiéniai hiányosságairól és cherry traumatikus öltözői emlékeiről nosztalgiáztak.
 
-### **#pajzán-zárka**
+#rajzok és #egyéb-művészetek
 
-* **Algoritmusok:** A csapat az Instagram és TikTok algoritmusairól beszélgetett, amik náluk leginkább edzős videókkal, "booktok" tartalmakkal vagy éppen lengébben öltözött hölgyekkel vannak tele.
-* **Biológiai érdekességek:** cherry egy NotebookLM podcast kapcsán hozott érdekességeket a lábasfejűekről, majd a beszélgetés elkalandozott a kacslabelű rákok extrém testarányú nemi szervéig, amit az evolúció egyik furcsaságaként emlegettek.
-* **Iskolai emlékek:** Egy korábbi osztálytárs (vagy iskolatárs) higiéniai hiányosságairól és cherry traumatikus öltözői emlékeiről nosztalgiáztak.
+- Plüss projekt: Csáki egy izgalmas projekten dolgozik: NFC-s plüssökön, amikhez egy webes alkalmazás is tartozik.
+  - cherry axolotl rajzát Csáki vektorizálta (SVG), így az appban a felhasználók dinamikusan színezhetik a plüssüket a fonalaknak megfelelően.
+  - A cél egyfajta "nyitottabb Amiibo" koncepció, ahol a plüssökhöz egy digitális "kert" és minijátékok is tartoznának. A közösségnek nagyon tetszik az ötlet, többen jelezték, hogy vásárolnának is belőle.
+- Art Collab: ismeretlen vok javasolt egy közös rajzolást, ahol mindenki a saját karakterét (OC) rajzolja meg egy adott színnel.
 
-### **#rajzok és #egyéb-művészetek**
+#memek-hihi és #állat-simogató
 
-* **Plüss projekt:** Csáki egy izgalmas projekten dolgozik: **NFC-s plüssökön**, amikhez egy webes alkalmazás is tartozik.
-* cherry axolotl rajzát Csáki vektorizálta (SVG), így az appban a felhasználók dinamikusan színezhetik a plüssüket a fonalaknak megfelelően.
-* A cél egyfajta "nyitottabb Amiibo" koncepció, ahol a plüssökhöz egy digitális "kert" és minijátékok is tartoznának. A közösségnek nagyon tetszik az ötlet, többen jelezték, hogy vásárolnának is belőle.
-
-
-* **Art Collab:** ismeretlen vok javasolt egy közös rajzolást, ahol mindenki a saját karakterét (OC) rajzolja meg egy adott színnel.
-
-### **#memek-hihi és #állat-simogató**
-
-* **Hivatalok:** cherry az egyetemi lakhatási támogatás lassú és elutasító ügyintézésén dühöngött.
-* **Állatok:** cherry mutatott egy képet a macskájáról, aki éppen vele "tanul", de kiderült, hogy a cica büdös, mert megevett egy poloskát.
-* **Zene/Kultúra:** Csáki Hatsune Miku vendégszerepléseiről hozott videót, Andris pedig a Threads és Twitter (X) felhasználók közötti különbségeken élcelődött.`,
-            wisecracks: [
+- Hivatalok: cherry az egyetemi lakhatási támogatás lassú és elutasító ügyintézésén dühöngött.
+- Állatok: cherry mutatott egy képet a macskájáról, aki éppen vele "tanul", de kiderült, hogy a cica büdös, mert megevett egy poloskát.
+- Zene/Kultúra: Csáki Hatsune Miku vendégszerepléseiről hozott videót, Andris pedig a Threads és Twitter (X) felhasználók közötti különbségeken élcelődött.`,wisecracks: [
                 `Andris a MÁV-ról: „A pokol az walk in the park lesz hozzá képest.” (A Mecsek IC-n töltött 5 év ingázás után.)`,
                 `Andris a tanulást segítő szerekről: „Spanyol orvostan hallgató ismerősöm mesélte, hogy vannak szaktársai, akik metheznek, hogy bírják a napokig nem alvást... én 100% tiszta szorongáson és az egyedül alvástól való félelmen futok.”`,
                 `Diszlexiás Harcihajó az egyetemi eszközökről: „University issued vibrator and anal beads. For study purposes of course.” (Egy alternatív szexuális felvilágosító kurzus ötlete kapcsán.)`,

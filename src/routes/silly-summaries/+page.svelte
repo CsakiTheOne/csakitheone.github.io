@@ -181,6 +181,54 @@ Csáki megosztott egy Sonic the Hedgehog 35. évfordulós videót is.`,
                 `Külön említést érdemel: Diszlexiás Harcihajó "békás" üzenete Szkera számára, amit csak azért küldött, mert szerinte a békák jó fejek, vagy ha nem is, legalább zöldek.`,
             ],
         },
+        day16: {
+            geminiSummary: `#csevegő
+Összefoglalók: Csáki megosztotta a "silly-summaries" weboldalát, aminek Andris nagyon örült. Csáki jelezte, hogy a 16-ai összefoglalóval még adós, de fáradt.
+
+Tudomány és Színek: cherry egy Instagram videó kapcsán mesélt arról, hogy a nők anatómiai és evolúciós okokból (tetrakromácia) jobban érzékelik a színeket.
+
+Gasztronómia: Diszlexiás Harcihajó (Ákos) villantott egy hatalmas adag bolognait, ami szerinte 2-3 napig elég lesz nekik. Bár szerénykedett a főzőtudományával, cherry biztosította róla, hogy a főztje "piszok jó".
+
+Színlátás teszt: Ákos büszkélkedett, hogy sikerült egy színlátás tesztje, amin cherry meglepődött, mert néha "színvaknak" tűnik.
+
+#pajzán-zárka
+Drip és humor: Diszlexiás Harcihajó egy bizarr ruházati kiegészítőt ("new drip") osztott meg, ami kiverte a biztosítékot.
+
+Gaming és technika: Csáki kiégett a Windows miatt, és bár Andris hívta Apexezni, Csáki nem tudott menni, mert egy külföldi barátjával már hónapok óta lefixálták a közös játékot.
+
+Half-Life nosztalgia: Csáki megnézett egy SFM videót Dr. Breenről, ami után kedvet kapott a Half-Life 2-höz.
+
+Kína: ismeretlen vok talált egy helyet Kínában, ahová azonnal el akart menni, és már a nyelvtanulást is fontolgatja.
+
+#memek-hihi
+Nosztalgia: Előkerült a klasszikus "Lemme Smash" mém.
+
+ADHD Limbo: Diszlexiás Harcihajó egy találó videót küldött az ADHD-s reggeli kómáról.
+
+Modding: Csáki elmélyült a Half-Life 2 modolásban (49 modot rakott be), és hívta Ákost, hogy nézze meg az eredményt. Felmerült egy-két pikánsabb mod létezése is Alyx szobája kapcsán.
+
+Kollégiumi emlékek: cherry megosztott egy képet egy "rohasztott" banánról a kollégiumi éveiből.
+
+AI és Tech: Csáki egy AI Waifu építős videót is elmentett a listájára.
+
+#rajzok
+Szenvedés az axonometriával: ismeretlen vok megbánta, hogy anno nem figyelt rajzórán, most viszont szüksége lenne rá. Később megmutatott egy készülő "clean sketchet" is.
+
+Anatómiai furcsaságok: cherry és ismeretlen vok a fura pózokról és a hajlékonyságról beszélgettek. cherry megmutatta, hogy a táncos múltja miatt még mindig képes "disturbing" pózokra hajtogatni magát.
+
+Videóvágás: ismeretlen vok elkészült egy videó bevezetőjével, amihez a nyújtózás hangeffektet ő maga imitálta a mikrofonba.
+
+#állat-simogató & #egyéb-művészetek
+Kiskedvencek: ismeretlen vok mutatott képeket a Sparrow nevű kutyusáról és Bettikéről, akikért Pepe is odavolt.
+
+Programozás: Csáki büszkélkedett egy WinUI projekttel, amivel a Sky fordításait lehet könnyen kezelni; örült, hogy végre nem "Windows 7 kinézetű szutykot" sikerült alkotnia.
+
+Konyhatündér tervek: ismeretlen vok és cherry receptekkel és "kajcsi ötletekkel" zárták a sort, bár abban egyetértettek, hogy a megvalósításig ritkán jutnak el.`,
+            wisecracks: [
+                `A "nyújtózás" hangeffekt: Kifejezetten kreatív (és vicces) részlet, hogy ismeretlen vok saját maga vette fel a mikrofonba a nyújtózkodás hangját a videójához, ahelyett, hogy keresett volna egyet.`,
+                `A Half-Life 2 modding-rejtély: Diszlexiás Harcihajó nosztalgikus története arról, hogy az apja által "kukázott" verzióban miért volt egy műbroki Alyx szobájában, és hogy ő ezt akkoriban a játék részének hitte-e vagy sem.`,
+            ],
+        },
     };
 
     let selectedDay = $state(startingDay);

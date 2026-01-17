@@ -259,7 +259,8 @@ Konyhatündér tervek: ismeretlen vok és cherry receptekkel és "kajcsi ötlete
 
 - Hivatalok: cherry az egyetemi lakhatási támogatás lassú és elutasító ügyintézésén dühöngött.
 - Állatok: cherry mutatott egy képet a macskájáról, aki éppen vele "tanul", de kiderült, hogy a cica büdös, mert megevett egy poloskát.
-- Zene/Kultúra: Csáki Hatsune Miku vendégszerepléseiről hozott videót, Andris pedig a Threads és Twitter (X) felhasználók közötti különbségeken élcelődött.`,wisecracks: [
+- Zene/Kultúra: Csáki Hatsune Miku vendégszerepléseiről hozott videót, Andris pedig a Threads és Twitter (X) felhasználók közötti különbségeken élcelődött.`,
+            wisecracks: [
                 `Andris a MÁV-ról: „A pokol az walk in the park lesz hozzá képest.” (A Mecsek IC-n töltött 5 év ingázás után.)`,
                 `Andris a tanulást segítő szerekről: „Spanyol orvostan hallgató ismerősöm mesélte, hogy vannak szaktársai, akik metheznek, hogy bírják a napokig nem alvást... én 100% tiszta szorongáson és az egyedül alvástól való félelmen futok.”`,
                 `Diszlexiás Harcihajó az egyetemi eszközökről: „University issued vibrator and anal beads. For study purposes of course.” (Egy alternatív szexuális felvilágosító kurzus ötlete kapcsán.)`,
@@ -271,9 +272,50 @@ A tény, hogy cherry macskája megevett egy poloskát, és emiatt büdös szájj
         },
     };
 
-    let selectedDay = $state(startingDay);
+    const superSummary = `Szia Silly! Üdv újra a fedélzeten. 👋 Összegyúrtam neked a lényeget az elmúlt pár napból, hogy ne kelljen több ezer üzenetet visszaolvasnod. Készülj fel, volt itt minden az AI-filozófiától a kolis gourmet receptekig.
+
+📝 A "Silly-gyorstalpaló" (Day 12–17)
+🎙️ Tech & AI & Fejlesztés
+Csáki nagyüzemben tolja a projekteket: készül egy NFC-s plüss projekt (mint egy saját Amiibo), ahol Cherry axolotl rajzait lehet digitálisan színezni. Emellett modernizálja a Sky fordítóprogramot (WinUI 3, kerekített gombok, nagyon fancy).
+
+A NotebookLM AI podcastja mindenkit lenyűgözött és egyben meg is ijesztett (ökológiai kérdések, "Mátrix-fíling").
+
+Andris és Csáki nosztalgiáztak a régi Sky: Children of the Light csalásokról (például tűzijáték lövöldözése bizonyos testrészekből).
+
+🍕 Gasztro-horror és túlélőkészlet
+A csapat feltalálta a "Kolis Gourmet" kategóriát: fagyasztott pizzát félbehajtva melegszendvics-sütőben sütni 10/10-es életmentő tipp.
+
+Diszlexiás Harcihajó (Ákos) előállt a "nutellás vodka" ötletével, amit Cherry azonnal "visítófosásnak" minősített.
+
+ismeretlen vok receptje: a zacskós tészta maradék levébe üss egy tojást és mikrozd meg. Ez a túlélés kulcsa.
+
+📸 Szociális élet & IRL események
+cherry és ismeretlen vok összehoztak egy közös fotózást (modellkedés + fotós gyakorlás), ami után Cherry teljesen el volt ájulva a képektől.
+
+Szerveződik egy pécsi szerver-találkozó! Amikor ismeretlen vok azt mondta, nincs rá pénze, a többiek (Csákiék) azonnal felajánlották, hogy összedobják neki a beugrót, mert a társaság a fontos.
+
+Cherry túlélte a vizsgaidőszakot, nem rágta le a körmét, és kiderült, hogy a macskája büdös, mert poloskát evett.
+
+🎨 Kreatív sarok
+ismeretlen vok animációkat készít (nyújtózkodó karakterek), amikhez saját maga vette fel a hangeffekteket a mikrofonba.
+
+Volt egy kis Half-Life 2 nosztalgia is, Csáki 49 moddal turbózta fel a játékot, és előkerült egy városi legenda egy "véletlenül bennhagyott" felnőtt tartalmú modról Alyx szobájában.
+
+🏆 Aranyköpések, amikről lemaradtál:
+Andris a MÁV-ról: "A pokol az walk in the park lesz hozzá képest."
+
+Cherry az evolúcióról: "Az ember az én szememben mostantól egy evolúciós csőd... a [kacslábú] rákokhoz képest." (Ne kérdezd, a testarányokról volt szó.)
+
+Ákos (Diszlexiás Harcihajó): "A legveszélyesebb, hogy elcsúszok és leesek az IQ-mra."`;
+
+    let selectedDay = $state(-1);
     const selectedDayContent = $derived(
-        Object.entries(daysContent)[selectedDay - startingDay]?.[1] || {},
+        selectedDay < 0
+            ? {
+                  geminiSummary: superSummary,
+                  wisecracks: [],
+              }
+            : Object.entries(daysContent)[selectedDay - startingDay]?.[1] || {},
     );
 </script>
 
@@ -289,6 +331,12 @@ A tény, hogy cherry macskája megevett egy poloskát, és emiatt büdös szájj
             Jan {day}.
         </button>
     {/each}
+    <button
+        onclick={() => (selectedDay = -1)}
+        class:unselected={selectedDay !== -1}
+    >
+        MINDEN!
+    </button>
 </div>
 <hr />
 <main>

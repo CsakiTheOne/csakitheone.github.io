@@ -270,6 +270,40 @@ Konyhatündér tervek: ismeretlen vok és cherry receptekkel és "kajcsi ötlete
 A tény, hogy cherry macskája megevett egy poloskát, és emiatt büdös szájjal próbált vele együtt tanulni.`,
             ],
         },
+        day18: {
+            geminiSummary: `#csevegő: Podcastok, Konzolok és Vizsgaidőszak
+Munka és Podcastok: A beszélgetés elején Csáki és cherry a készülő podcast epizódokról egyeztettek (melyik dátumok kellenek, melyik nem).
+
+Technológia és Gaming:
+
+Csáki megosztott egy videót egy Hatsune Miku limitált kiadású HiBy lejátszóról, ami sajnos már elfogyott ("Sold out").
+
+ismeretlen vok Nintendo Switch Lite vásárlásán gondolkodik (Animal Crossing és Stardew Valley miatt). Csáki tanácsokkal látta el: elmondta, hogy a Lite nem köthető TV-re, és bizonyos újabb játékok (mint a pletykált Switch 2-es címek vagy a Cyberpunk) nem fognak futni rajta. Javasolta egy használt, alap Switch V1 beszerzését is a joyconok és a dokkoló miatt.
+
+Tanulás és Motiváció:
+
+cherry a keddi és csütörtöki vizsgáira készül (latin nevezéktan, "tengeri uborkák"). Bevallotta, hogy bár újra elkezdett edzeni (plank, nyújtás), a teste "roncs lett" a korábbi versenytáncos éveihez képest.
+
+Diszlexiás Harcihajó motivációs videókkal és tanácsokkal próbálta segíteni cherry-t, hangsúlyozva, hogy a mozgás segít a tanulásban és az alvásban is. cherry végül egy "all-nighter" (egész éjszakás tanulás) mellett döntött matcha és kaja segítségével.
+
+#pajzán-zárka és #memek-hihi
+Ebben a szekcióban főleg Diszlexiás Harcihajó és Csáki osztott meg mémeket, Instagram reel-eket és YouTube shortokat.
+
+Szóba került a Vencord (modolt Discord kliens) is; ismeretlen vok titokzatoskodott vele kapcsolatban, amire Andris megjegyezte, hogy mindenki felnőtt, és tudja, mit használ.
+
+Csáki megmutatta, hogyan szabta testre a telefonja kezdőképernyőjét.
+
+#fényképek és #fit-check
+cherry megosztott egy képet egy 7%-os alkoholos italról, amit "bukás esetére" tartogat a vizsgák mellé.
+
+ismeretlen vok képeket mutatott a játékbeli karakteréről (MC), aki szerinte nagyon hasonlít a Love and Deepspace karakterére.
+
+Csáki posztolt egy "fit-check"-et: megborotválkozott, szövetkabátot húzott, és büszkélkedett a kalapjába tűzött pávatollával. cherry azonnal jelezte, hogy ellopná a tollat, sőt cserébe fácántollat is felajánlott.
+
+#állat-simogató
+cherry küldött egy képet egy bújós macskáról, megjegyezve, hogy "legalább van, aki szereti".`,
+            wisecracks: [],
+        },
     };
 
     const superSummary = `Szia Silly! Üdv újra a fedélzeten. 👋 Összegyúrtam neked a lényeget az elmúlt pár napból, hogy ne kelljen több ezer üzenetet visszaolvasnod. Készülj fel, volt itt minden az AI-filozófiától a kolis gourmet receptekig.

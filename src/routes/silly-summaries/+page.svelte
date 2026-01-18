@@ -306,41 +306,45 @@ cherry küldött egy képet egy bújós macskáról, megjegyezve, hogy "legaláb
         },
     };
 
-    const superSummary = `Szia Silly! Üdv újra a fedélzeten. 👋 Összegyúrtam neked a lényeget az elmúlt pár napból, hogy ne kelljen több ezer üzenetet visszaolvasnod. Készülj fel, volt itt minden az AI-filozófiától a kolis gourmet receptekig.
+    const superSummary = `Szia Silly! Üdv újra a fedélzeten! 👋 Mivel elég sok minden történt, amíg távol voltál, itt egy gyors, zanzásított összefoglaló a szerver életéről, hogy tíz perc alatt képbe kerülj:
 
-📝 A "Silly-gyorstalpaló" (Day 12–17)
-🎙️ Tech & AI & Fejlesztés
-Csáki nagyüzemben tolja a projekteket: készül egy NFC-s plüss projekt (mint egy saját Amiibo), ahol Cherry axolotl rajzait lehet digitálisan színezni. Emellett modernizálja a Sky fordítóprogramot (WinUI 3, kerekített gombok, nagyon fancy).
+🎙️ AI, Tudomány és Filozófia
+A csapat teljesen rákattant a NotebookLM-re. Cherryék mély ökológiai és evolúciós kérdéseket feszegettek az AI segítségével (pl. a lábasfejűek és a kacslabelű rákok fura anatómiája), sőt, egy komplett podcast-sorozat is készült a beszélgetéseitekből.
 
-A NotebookLM AI podcastja mindenkit lenyűgözött és egyben meg is ijesztett (ökológiai kérdések, "Mátrix-fíling").
+📅 A "Nagy Találkozás"
+Cherry és ismeretlen vok végre összehoztak egy közös napot! A Derék réti buszmegállóban indult a randevú, ami egy profi fotózásba torkollott: ismeretlen vok fotózta Cherryt, aki el volt ájulva az eredménytől (szerinte ő azóta a hivatalos modellje). Felmerült egy nagyobb, pécsi szerver-tali ötlete is, ahol a többiek már felajánlották, hogy kisegítik egymást, ha valakinek épp szűkös a keret.
 
-Andris és Csáki nosztalgiáztak a régi Sky: Children of the Light csalásokról (például tűzijáték lövöldözése bizonyos testrészekből).
+🛠️ Tech és Fejlesztés
+Csáki nem pihen: készített egy "Silly Summaries" weboldalt (igen, rólad nevezték el!), és gőzerővel dolgozik a Sky: Children of the Light magyarításán, meg egy WinUI alapú fordítóprogramon.
 
-🍕 Gasztro-horror és túlélőkészlet
-A csapat feltalálta a "Kolis Gourmet" kategóriát: fagyasztott pizzát félbehajtva melegszendvics-sütőben sütni 10/10-es életmentő tipp.
+A legmenőbb projektje most az NFC-s plüssök: olyan plüssök, amiket egy appon keresztül lehet testre szabni (Cherry axolotl rajza volt az első prototípus).
 
-Diszlexiás Harcihajó (Ákos) előállt a "nutellás vodka" ötletével, amit Cherry azonnal "visítófosásnak" minősített.
+Andris és Csáki közben a régi szép időkről nosztalgiáztak, amikor még tűzijátékokat lődöztek ki a karakterükből a Sky-ban.
 
-ismeretlen vok receptje: a zacskós tészta maradék levébe üss egy tojást és mikrozd meg. Ez a túlélés kulcsa.
+🎓 Vizsgadrukk és Túlélés
+Mindenki a vizsgákkal küzd:
 
-📸 Szociális élet & IRL események
-cherry és ismeretlen vok összehoztak egy közös fotózást (modellkedés + fotós gyakorlás), ami után Cherry teljesen el volt ájulva a képektől.
+Cherry a biosz/latin szigorlatok között matchán és éjszakázáson él (meg néha egy-egy poloskát evő macska zavarja a tanulásban).
 
-Szerveződik egy pécsi szerver-találkozó! Amikor ismeretlen vok azt mondta, nincs rá pénze, a többiek (Csákiék) azonnal felajánlották, hogy összedobják neki a beugrót, mert a társaság a fontos.
+Szkera épp a diplomája előtt "pakolt ki" (asztalos/ötvös témák).
 
-Cherry túlélte a vizsgaidőszakot, nem rágta le a körmét, és kiderült, hogy a macskája büdös, mert poloskát evett.
+Diszlexiás Harcihajó pedig gépészmérnöki magasságokban (vagy mélységekben) küzd a hőtan vizsgával.
 
-🎨 Kreatív sarok
-ismeretlen vok animációkat készít (nyújtózkodó karakterek), amikhez saját maga vette fel a hangeffekteket a mikrofonba.
+🍕 Gasztro-horror a koliszobából
+Ha megéheznél, íme a csapat legutóbbi tippjei:
 
-Volt egy kis Half-Life 2 nosztalgia is, Csáki 49 moddal turbózta fel a játékot, és előkerült egy városi legenda egy "véletlenül bennhagyott" felnőtt tartalmú modról Alyx szobájában.
+Fagyasztott pizza félbehajtva, melegszendvics-sütőben (Ákos szerint 10/10).
 
-🏆 Aranyköpések, amikről lemaradtál:
-Andris a MÁV-ról: "A pokol az walk in the park lesz hozzá képest."
+Zacskós tészta maradék levébe ütött tojás, mikrózva.
 
-Cherry az evolúcióról: "Az ember az én szememben mostantól egy evolúciós csőd... a [kacslábú] rákokhoz képest." (Ne kérdezd, a testarányokról volt szó.)
+Ami tilos: A nutellás vodka és a mogyorós vodka (Cherry szerint ez a "visítófosás" biztos receptje).
 
-Ákos (Diszlexiás Harcihajó): "A legveszélyesebb, hogy elcsúszok és leesek az IQ-mra."`;
+✨ Egyéb apróságok
+Csáki villantott egy "fit-check"-et pávatollas kalappal (amit Cherry azonnal el akart lopni).
+
+Ismeretlen vok majdnem vett egy Nintendo Switchet, de a többiek lebeszélték a Lite-ról.
+
+Tele lett a szerver állatos képekkel: Sparrow kutya, Bettike és a büdös szájú poloskavadász macska a sztárok.`;
 
     let selectedDay = $state(-1);
     const selectedDayContent = $derived(

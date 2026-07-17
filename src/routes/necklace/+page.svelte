@@ -87,6 +87,7 @@
             11773487 - 01636022
         </button>
     </div>
+    <hr>
     <div class="section">
         <a
             style="background-color: var(--color-red);"
@@ -96,6 +97,7 @@
             <span>Kolora Egyesület</span>
         </a>
     </div>
+    <hr>
     <div class="section">
         <a
             style="background-color: #323232; color: var(--color-on-surface);"
@@ -169,6 +171,8 @@
         padding: 16px;
         background-color: var(--color-primary);
         color: var(--color-on-primary);
+        outline: none;
+        border: none;
         border-radius: 24px;
         text-decoration: none;
         font-size: 18px;

@@ -77,6 +77,15 @@
                 <Copy />
             </button>
         </div>
+        <button
+            style="background-color: var(--color-tertiary);"
+            onclick={() => {
+                navigator.clipboard.writeText("1177348701636022");
+            }}
+        >
+            Számlaszám<br />
+            11773487 - 01636022
+        </button>
     </div>
     <div class="section">
         <a
